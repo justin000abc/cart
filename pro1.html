@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="https://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="cart.js"></script>
+<style>
+	.container {
+		width: 100%;
+		overflow: hidden;
+	}
+	.center {
+		text-align: center;
+	}
+	.item_wrap {
+		margin-left: -15px;
+		margin-right: -15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.item {
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.inq_btn {
+		display: inline-block;
+		padding: 5px 10px;
+		background-color: #ccc;
+		cursor: pointer;
+		color: #333;
+		text-decoration: none;
+	}
+	.inq_btn.added {
+		background-color: #6697c7;
+		color: #fff;
+	}
+	.mt20 {
+		margin-top: 20px;
+	}
+	a {
+		display: inline-block;
+	}
+	.cart {
+		position: relative;
+		font-size: 16px;
+	}
+	.cart:after {
+		content: attr(data-quan);
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 12px;
+		width: 14px;
+		height: 14px;
+		line-height: 14px;
+		text-align: center;
+		border-radius: 50%;
+		color: #fff;
+		background-color: #6697c7;
+		transform: translate(80%,-50%);
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item_wrap">
+			<div class="item">
+				<div class="pro-img">
+					<img src="11pro.jpg" alt="">
+				</div>
+				<h3 class="mt20">iPhone 11 Pro</h3>
+				<div class="price mt20">$ 35900</div>
+				<a href="" class="inq_btn mt20" data-price="35900" data-img="11pro.jpg" data-name="iPhone 11 Pro">iPhone 11 Pro</a>
+			</div>
+			<div class="item">
+				<div class="pro-img">
+					<img src="11.jpg" alt="">
+				</div>
+				<h3 class="mt20">iPhone 11</h3>
+				<div class="price mt20">$ 24900</div>
+				<a href="" class="inq_btn mt20" data-price="24900" data-img="11.jpg" data-name="iPhone 11">iPhone 11</a>
+			</div>
+			<div class="item">
+				<div class="pro-img">
+					<img src="xr.jpg" alt="">
+				</div>
+				<h3 class="mt20">iPhone XR</h3>
+				<div class="price mt20">$ 21500</div>
+				<a href="" class="inq_btn mt20" data-price="21500" data-img="xr.jpg" data-name="iPhone XR">iPhone XR</a>
+			</div>
+			<div class="item">
+				<div class="pro-img">
+					<img src="8.jpg" alt="">
+				</div>
+				<h3 class="mt20">iPhone 8</h3>
+				<div class="price mt20">$ 15900</div>
+				<a href="" class="inq_btn mt20" data-price="15900" data-img="8.jpg" data-name="iPhone 8">iPhone 8</a>
+			</div>
+		</div>
+		<br>
+		<a href="cart.html" class="mt20 cart" title="">購物車</a>
+	</div>
+<script>
+new cla_inquiry('.cart',"inq_storage",".inq_btn",1000*60*60*24);	
+</script>
+</body>
+</html>

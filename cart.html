@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="https://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="cart.js"></script>
+<style>
+	.container {
+		width: 100%;
+		overflow: hidden;
+	}
+	.item_wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.item_wrap .item {
+		width: 200px;
+		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.item_wrap .item .txt {
+		margin-top: 20px;
+	}
+	.item_wrap .item .btn {
+		margin-top: 10px;
+	}
+	.item_wrap .item img {
+		/*max-width: 300px;*/
+		max-width: 100%;
+	}
+	a {
+		display: inline-block;
+	}
+	.series:before {
+		content: '$';
+		margin-right: 5px;
+	}
+	.mt20 {
+		margin-top: 20px;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>已加入購物車項目</h1>
+		<div class="item_wrap"></div>
+		<div class="mt20">
+			總金額: $ <span class="total_price">0</span>
+		</div>
+		<a class="mt20" href="pro1.html">回產品列表</a>
+	</div>
+<script>
+	inquiry_obj = new cla_inquiry('',"inq_storage",".inq_btn",1000*60*60*24);	
+	inquiry_obj.show_list('.item_wrap','.total_price');
+</script>
+</body>
+</html>
